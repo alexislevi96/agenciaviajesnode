@@ -1,0 +1,26 @@
+{
+  "name": "agenciaviajesnode",
+  "version": "1.0.0",
+  "description": "Primer proyecto con node.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "type": "module", 
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexislevi96/agenciaviajesnode.git"
+  },
+  "author": "Alexis Guerra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexislevi96/agenciaviajesnode/issues"
+  },
+  "homepage": "https://github.com/alexislevi96/agenciaviajesnode#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  }
+}
