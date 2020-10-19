@@ -7,8 +7,11 @@ html(lang="en")
         link(href='https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Staatliches&display=swap' rel='stylesheet')
         link(rel="stylesheet", href="/css/bootstrap.css")
         link(rel="stylesheet", href="/css/style.css")
-    body
+        script(src='https://kit.fontawesome.com/6e14039839.js' crossorigin='anonymous')
+    body(class=clase)
         include header
+        block slider
+
         block contenido
 
         include footer

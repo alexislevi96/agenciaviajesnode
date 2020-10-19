@@ -17,12 +17,12 @@ export const Viaje = db.define('viajes',{
         type: Sequelize.DATE
     },
     imagen: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING
     },
     disponibles: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING
     },
     slug: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING
     }
 });

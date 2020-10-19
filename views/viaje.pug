@@ -1,0 +1,24 @@
+extends ./layout/index
+block contenido
+
+    main.container.mt-5
+        .row
+            .col-md-5
+                img(src=`/img/destinos_${viaje.imagen}_ln.jpg`, alt="", class="img-fluid")
+            .col-md-7
+                h1=viaje.titulo
+                p
+                    i.fas.fa-calendar-week(style={margin:'0 10px 0 0'})
+                    | #{viaje.fecha_ida} - #{viaje.fecha_vuelta}
+                                
+                p
+                    i.far.fa-user-circle(style={margin:'0 10px 0 0'})
+                    | #{viaje.disponibles} Disponibles
+                p
+                    i.fas.fa-tag(style={margin:'0 10px 0 0'})
+                    | $#{viaje.precio} USA
+
+                p
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi a asperiores non ut voluptates necessitatibu...
+                    a(href=`viajes/${viaje.slug}`, class="btn btn-sucess btn-block")(style={background:'#DC135F',color:'white',}) MÁS INFORMACION
+    

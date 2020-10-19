@@ -1,0 +1,19 @@
+.row.proximos-viajes
+    each viaje in viajes
+        .col-md-6.col-lg-4.mb-4
+            .card
+                img.card-img-top(src=`img/destinos_${viaje.imagen}.jpg `)
+                .card-body
+                    h2= viaje.titulo
+                    p
+                        i.fas.fa-calendar-week(style={margin:'0 10px 0 0'})
+                        | #{viaje.fecha_ida} - #{viaje.fecha_vuelta}
+                        
+                    p
+                        i.far.fa-user-circle(style={margin:'0 10px 0 0'})
+                        | #{viaje.disponibles} Disponibles
+                    
+                    p
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi a asperiores non ut voluptates necessitatibu...
+                        a(href=`viajes/${viaje.slug}`, class="btn btn-sucess btn-block")(style={background:'#DC135F',color:'white',}) MÁS INFORMACION
+
