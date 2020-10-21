@@ -4,8 +4,8 @@ import db from './config/db.js'
 import dotenv from 'dotenv';
 dotenv.config( {path: 'variables.env'});
 
+//Es el marco del servidor para nodejs
 const app = express();
-
 
 //Conectar base de datos
 db.authenticate()

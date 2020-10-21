@@ -6,6 +6,8 @@ const paginaInicio = async(req, res)=>{
     //req - lo que enviamos y res - lo que express nos responde
 
     //Consultar 3 viajes del modelo Viaje
+    //Utilizamos promise para que haya una cola de consultas a la db
+    // y asi se cargue la pagina cuando se termine de hacer todas las querys
     const promisDB = [];
     promisDB.push(Viaje.findAll({limit: 3}));
     promisDB.push(Testimonial.findAll({limit: 3}));
@@ -14,6 +16,7 @@ const paginaInicio = async(req, res)=>{
 
         res.render('inicio',{
             pagina : 'Inicio',
+            //la clase home es para el estilo css del header 
             clase: 'home',
             viajes: resultado[0],
             testimoniales: resultado[1]
@@ -61,12 +64,22 @@ const paginaDetalleViaje =  async (req, res)=>{
         const viaje = await Viaje.findOne({ where : { slug}});
         res.render('viaje',{
             pagina: 'InformacionViaje',
-            viaje
+            viaje,
+            slug
         })
     } catch (error){
         console.log(error);
     }
-
 }
 
-export {paginaInicio, paginaNosotros, paginaViajes, paginaTestimoniales, paginaDetalleViaje}
+const pagarviaje = async (req, res) => {
+    
+    const {slug} = req.params;
+
+    res.render('pagarviaje',{
+        pagina: "PAGAR VIAJE",
+    })
+}
+
+
+export {paginaInicio, paginaNosotros, paginaViajes, paginaTestimoniales, paginaDetalleViaje, pagarviaje}

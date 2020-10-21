@@ -4,7 +4,8 @@ import {
     paginaNosotros, 
     paginaViajes, 
     paginaTestimoniales,
-    paginaDetalleViaje
+    paginaDetalleViaje,
+    pagarviaje
 } from '../controllers/paginaController.js';
 import {
     guardarTestimonial
@@ -19,6 +20,8 @@ router.get('/nosotros', paginaNosotros );
 router.get('/viajes', paginaViajes);
 
 router.get('/viajes/:slug', paginaDetalleViaje);
+
+router.get('/viajes/:slug/pagarviaje', pagarviaje)
 
 router.get('/testimoniales', paginaTestimoniales);
 router.post('/testimoniales', guardarTestimonial);
